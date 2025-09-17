@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>ChicWear - Sản phẩm liên quan</title>
+    <link rel="stylesheet" href="chucnamgtimkiem.css">
+</head>
+<body>
+    <!-- PHẦN ĐẦU (HEADER) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-left">
+                <a href="#">Shop Bán Hàng</a> | 
+                <a href="#">Tham Gia Cùng Chúng Tôi</a> | 
+                <a href="#">Tải Ứng Dụng</a> | 
+                <a href="#">Kết Nối <span class="dot">F</span></a>
+            </div>
+            <div class="header-right">
+                <a href="#">Thông báo</a> | 
+                <a href="#">Hỗ trợ</a> | 
+                <div class="lang-dropdown">
+                    <button id="lang-btn">Tiếng Việt <span class="arrow">▼</span></button>
+                    <div class="lang-menu" id="lang-menu">
+                        <div data-lang="vi">Tiếng Việt</div>
+                        <div data-lang="en">English</div>
+                    </div>
+                </div> 
+                | <a href="#">Đăng Ký</a> | 
+                <a href="#">Đăng Nhập</a>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="logo">
+                <img src="chicken.png" alt="ChicWear" class="logo-icon">
+                <span>ChicWear</span>
+            </div>
+            <form class="search-bar">
+                <input type="text" placeholder="ChicWear bao ship 0 đ - Đăng ký ngay !">
+                <button type="submit" class="search-btn"><span class="search-icon">&#128269;</span></button>
+            </form>
+            <a class="cart" href="cart.html" title="Giỏ hàng">
+                <span class="cart-icon">&#128722;</span>
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="#">Áo Khoát Hot</a>
+            <a href="#">Quần Bò Kaki</a>
+            <a href="#">Mũ Rơm Luffy</a>
+            <a href="#">Áo Chống Đạn</a>
+            <a href="#">Quần Chống Cháy</a>
+            <a href="#">Mũ Chống Mảnh Lựu Đạn</a>
+        </nav>
+    </header>
+
+    <!-- PHẦN NỘI DUNG CHÍNH -->
+    <div class="main-bg">
+    <div class="container">
+        <div class="left">
+            <h3>Bộ Lọc Tìm Kiếm</h3>
+            <div class="filter-group">
+                <div class="filter-title">Nơi Bán</div>
+                <label><input type="checkbox"> Hà Nội</label>
+                <label><input type="checkbox"> TP Hồ Chí Minh</label>
+                <label><input type="checkbox"> Thái Nguyên</label>
+                <label><input type="checkbox"> Vĩnh Phúc</label>
+                <label><input type="checkbox"> Đà Nẵng</label>
+                <label><input type="checkbox"> Đà Lạt</label>
+                <label><input type="checkbox"> Cao Bằng</label>
+                <label><input type="checkbox"> Bắc Cạn</label>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title">Theo Danh Mục</div>
+                <label><input type="checkbox"> Áo</label>
+                <label><input type="checkbox"> Quần</label>
+                <label><input type="checkbox"> Mũ</label>
+                <label><input type="checkbox"> Nội Y</label>
+                <label><input type="checkbox"> Giày</label>
+                <label><input type="checkbox"> Đầm</label>
+                <label><input type="checkbox"> Áo Khoác</label>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title">Đơn Vị Vận Chuyển</div>
+                <label><input type="checkbox"> Nhanh</label>
+                <label><input type="checkbox"> Chậm</label>
+            </div>
+        </div>
+        <div class="main">
+            <div class="sort-bar">
+                <span class="sort-label">Sắp Xếp Theo</span>
+                <button class="active">Liên Quan</button>
+                <button>Mới Nhất</button>
+                <button>Bán Chạy</button>
+                <button>Giá</button>
+                <span class="page">Trang 1 / 17</span>
+            </div>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="https://i.imgur.com/0DJbNQO.png" alt="Áo Quần Thun Nam 2025">
+                    <div class="product-title">Áo Và Quần Thun Nam 2025</div>
+                    <div class="product-price">59.000 VND <span class="discount">-45%</span></div>
+                    <div class="product-tag">#ShopThinhHanh</div>
+                    <div class="product-rating"><span class="star">★</span> 4.6</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/0DJbNQO.png" alt="Áo Quần Thun Nam 2025">
+                    <div class="product-title">Áo Và Quần Thun Nam 2025</div>
+                    <div class="product-price">59.000 VND <span class="discount">-45%</span></div>
+                    <div class="product-tag">#ShopThinhHanh</div>
+                    <div class="product-rating"><span class="star">★</span> 4.6</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/0DJbNQO.png" alt="Áo Quần Thun Nam 2025">
+                    <div class="product-title">Áo Và Quần Thun Nam 2025</div>
+                    <div class="product-price">59.000 VND <span class="discount">-45%</span></div>
+                    <div class="product-tag">#ShopThinhHanh</div>
+                    <div class="product-rating"><span class="star">★</span> 4.6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Ngôn ngữ JS giữ nguyên (nếu cần) ... -->
+    <script>
+        // Xử lý menu ngôn ngữ
+        document.addEventListener("DOMContentLoaded", function () {
+            var langBtn = document.getElementById("lang-btn");
+            var langMenu = document.getElementById("lang-menu");
+            var langArrow = langBtn.querySelector(".arrow");
+
+            langBtn.onclick = function (e) {
+                e.preventDefault();
+                langMenu.classList.toggle("show");
+                langArrow.textContent = langMenu.classList.contains("show") ? "▲" : "▼";
+            };
+
+            langMenu.querySelectorAll("div").forEach(function(item) {
+                item.onclick = function() {
+                    langBtn.childNodes[0].nodeValue = item.textContent + " ";
+                    langMenu.classList.remove("show");
+                    langArrow.textContent = "▼";
+                }
+            });
+
+            // Click ngoài sẽ đóng menu
+            document.addEventListener("click", function(e){
+                if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+                    langMenu.classList.remove("show");
+                    langArrow.textContent = "▼";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
