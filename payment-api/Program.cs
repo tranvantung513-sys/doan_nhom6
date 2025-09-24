@@ -12,11 +12,15 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll", policy =>
         policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 });
+builder.Services.AddAuthentication(); // Nếu dùng JWT hoặc cookie auth
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
 // Configure middleware
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.Run();
