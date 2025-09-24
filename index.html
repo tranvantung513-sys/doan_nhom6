@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ChicWear | Giỏ hàng</title>
+
+    <link rel="stylesheet" href="./assets/css/STYLE.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>CHICWEAR | GIỎ HÀNG</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+          <button>🔍</button>
+        </div>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Số tiền</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img src="./assets/img/tainghe.webp" alt="Tai nghe" />
+              <p>
+                Tai nghe bluetooth vippro, xịn xò, dùng cho mọi lứa tuổi từ nhỏ
+                đến già
+              </p>
+            </td>
+            <td>1.000.000đ</td>
+            <td>
+              <div class="quantity">
+                <button>-</button>
+                <span>3</span>
+                <button>+</button>
+              </div>
+            </td>
+            <td>3.000.000đ</td>
+            <td class="remove">XÓA</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img src="./assets/img/thetbi.jpg" alt="Dụng cụ theo dõi" />
+              <p>
+                Dụng cụ theo dõi bằng bluetooth chống ngoại tình dành cho những
+                cặp vợ chồng không tin tưởng nhau
+              </p>
+            </td>
+            <td>2.000.000đ</td>
+            <td>
+              <div class="quantity">
+                <button>-</button>
+                <span>3</span>
+                <button>+</button>
+              </div>
+            </td>
+            <td>6.000.000đ</td>
+            <td class="remove">XÓA</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer">
+        <div><input type="checkbox" /> Chọn tất cả (2)</div>
+        <div>
+          Tổng cộng (0 sp đã chọn): <b>0đ</b>
+          <button class="buy-btn">MUA HÀNG</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
