@@ -1,0 +1,116 @@
+/* ======= RESET & BASE ======= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ======= COLOR & BUTTON ======= */
+.text-pink {
+  color: #E91E63;
+}
+
+.btn-pink {
+  background-color: #E91E63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pink:hover {
+  background-color: #C2185B;
+}
+
+/* ======= CARD & FORM ======= */
+.card {
+  border-radius: 12px;
+  border: none;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* ======= LIST GROUP ======= */
+.list-group-item {
+  font-size: 0.95rem;
+  padding: 10px 14px;
+}
+
+/* ======= SUCCESS PAGE ======= */
+.success-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.success-container h2 {
+  font-size: 1.8rem;
+  color: #E91E63;
+  margin-bottom: 1rem;
+}
+
+.success-container p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-pink {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+  }
+}
