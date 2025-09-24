@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PaymentApi.Data;
 using PaymentApi.Models;
+using System.Security.Claims;
 
 namespace PaymentApi.Controllers;
 
@@ -16,19 +18,24 @@ public class CheckoutController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize] // Nếu hệ thống đã có xác thực
     public IActionResult Post([FromBody] CheckoutRequest request)
     {
-        if (request == null || request.Items == null || !request.Items.Any())
+        if (!ModelState.IsValid || request.Items == null || !request.Items.Any())
             return BadRequest(new { success = false, message = "Dữ liệu không hợp lệ" });
+
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "anonymous";
 
         var order = new Order
         {
+            UserId = userId,
             FullName = request.FullName,
             Address = request.Address,
             Phone = request.Phone,
             PaymentMethod = request.PaymentMethod,
             Items = request.Items,
-            TotalAmount = request.Items.Sum(i => i.Quantity * i.UnitPrice)
+            TotalAmount = request.Items.Sum(i => i.Quantity * i.UnitPrice),
+            Status = OrderStatus.Pending
         };
 
         _db.Orders.Add(order);
