@@ -1,0 +1,22 @@
+CREATE DATABASE FashionShop;
+GO
+USE FashionShop;
+GO
+
+CREATE TABLE Orders (
+  Id INT PRIMARY KEY IDENTITY,
+  FullName NVARCHAR(100),
+  Address NVARCHAR(255),
+  Phone NVARCHAR(20),
+  PaymentMethod NVARCHAR(20),
+  TotalAmount DECIMAL(18,2),
+  CreatedAt DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE OrderItems (
+  Id INT PRIMARY KEY IDENTITY,
+  OrderId INT FOREIGN KEY REFERENCES Orders(Id),
+  ProductName NVARCHAR(100),
+  Quantity INT,
+  UnitPrice DECIMAL(18,2)
+);
