@@ -34,8 +34,8 @@
                 <img src="chicken.png" alt="ChicWear" class="logo-icon">
                 <span>ChicWear</span>
             </div>
-            <form class="search-bar">
-                <input type="text" placeholder="ChicWear bao ship 0 đ - Đăng ký ngay !">
+            <form class="search-bar" id="searchForm">
+                <input type="text" placeholder="ChicWear bao ship 0 đ - Đăng ký ngay !" id="searchInput">
                 <button type="submit" class="search-btn"><span class="search-icon">&#128269;</span></button>
             </form>
             <a class="cart" href="cart.html" title="Giỏ hàng">
@@ -93,28 +93,8 @@
                 <button>Giá</button>
                 <span class="page">Trang 1 / 17</span>
             </div>
-            <div class="product-list">
-                <div class="product-card">
-                    <img src="https://i.imgur.com/0DJbNQO.png" alt="Áo Quần Thun Nam 2025">
-                    <div class="product-title">Áo Và Quần Thun Nam 2025</div>
-                    <div class="product-price">59.000 VND <span class="discount">-45%</span></div>
-                    <div class="product-tag">#ShopThinhHanh</div>
-                    <div class="product-rating"><span class="star">★</span> 4.6</div>
-                </div>
-                <div class="product-card">
-                    <img src="https://i.imgur.com/0DJbNQO.png" alt="Áo Quần Thun Nam 2025">
-                    <div class="product-title">Áo Và Quần Thun Nam 2025</div>
-                    <div class="product-price">59.000 VND <span class="discount">-45%</span></div>
-                    <div class="product-tag">#ShopThinhHanh</div>
-                    <div class="product-rating"><span class="star">★</span> 4.6</div>
-                </div>
-                <div class="product-card">
-                    <img src="https://i.imgur.com/0DJbNQO.png" alt="Áo Quần Thun Nam 2025">
-                    <div class="product-title">Áo Và Quần Thun Nam 2025</div>
-                    <div class="product-price">59.000 VND <span class="discount">-45%</span></div>
-                    <div class="product-tag">#ShopThinhHanh</div>
-                    <div class="product-rating"><span class="star">★</span> 4.6</div>
-                </div>
+            <div class="product-list" id="productList">
+                <!-- Sản phẩm sẽ render bằng JS -->
             </div>
         </div>
     </div>
@@ -148,6 +128,146 @@
                     langArrow.textContent = "▼";
                 }
             });
+
+            // Danh sách sản phẩm (12 sản phẩm, mỗi cái tên khác nhau)
+            const products = [
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Áo Thun Nam 2025",
+                    price: "59.000 VND",
+                    discount: "-45%",
+                    tag: "#ShopThinhHanh",
+                    rating: "4.6"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Quần Jeans Đen Cá Tính",
+                    price: "179.000 VND",
+                    discount: "-30%",
+                    tag: "#Denim2025",
+                    rating: "4.2"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Áo Khoác Gió Nữ",
+                    price: "249.000 VND",
+                    discount: "-20%",
+                    tag: "#FashionNữ",
+                    rating: "4.7"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Mũ Luffy Rơm Đỏ",
+                    price: "69.000 VND",
+                    discount: "-15%",
+                    tag: "#MũHè",
+                    rating: "4.8"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Quần Kaki Văn Phòng",
+                    price: "129.000 VND",
+                    discount: "-10%",
+                    tag: "#KakiOffice",
+                    rating: "4.1"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Áo Sơ Mi Trắng",
+                    price: "99.000 VND",
+                    discount: "-25%",
+                    tag: "#Classic",
+                    rating: "4.5"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Đầm Xòe Công Sở",
+                    price: "199.000 VND",
+                    discount: "-35%",
+                    tag: "#ĐầmXinh",
+                    rating: "4.4"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Giày Thể Thao Nữ",
+                    price: "299.000 VND",
+                    discount: "-50%",
+                    tag: "#GiàyHot",
+                    rating: "4.9"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Áo Khoác Bomber",
+                    price: "219.000 VND",
+                    discount: "-20%",
+                    tag: "#BomberNam",
+                    rating: "4.3"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Quần Short Năng Động",
+                    price: "79.000 VND",
+                    discount: "-18%",
+                    tag: "#Short2025",
+                    rating: "4.5"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Nội Y Set 3 Món",
+                    price: "89.000 VND",
+                    discount: "-22%",
+                    tag: "#NoiY",
+                    rating: "4.7"
+                },
+                {
+                    img: "https://i.imgur.com/0DJbNQO.png",
+                    title: "Mũ Bucket Trẻ Trung",
+                    price: "49.000 VND",
+                    discount: "-12%",
+                    tag: "#BucketHat",
+                    rating: "4.6"
+                }
+            ];
+
+            // Hàm render sản phẩm
+            function renderProducts(list) {
+                const productList = document.getElementById("productList");
+                productList.innerHTML = "";
+                if (list.length === 0) {
+                    productList.innerHTML = "<div>Không tìm thấy sản phẩm phù hợp.</div>";
+                    return;
+                }
+                list.forEach(product => {
+                    productList.innerHTML += `
+                        <div class="product-card">
+                            <img src="${product.img}" alt="${product.title}">
+                            <div class="product-title">${product.title}</div>
+                            <div class="product-price">${product.price} <span class="discount">${product.discount}</span></div>
+                            <div class="product-tag">${product.tag}</div>
+                            <div class="product-rating"><span class="star">★</span> ${product.rating}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            // Hiển thị tất cả sản phẩm ban đầu
+            renderProducts(products);
+
+            // Xử lý tìm kiếm
+            const searchForm = document.getElementById("searchForm");
+            const searchInput = document.getElementById("searchInput");
+            searchForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const keyword = searchInput.value.trim().toLowerCase();
+                if (keyword === "") {
+                    renderProducts(products);
+                } else {
+                    const filtered = products.filter(p => p.title.toLowerCase().includes(keyword));
+                    renderProducts(filtered);
+                }
+            });
+
+            // Tìm kiếm khi nhấn Enter trong input (đã có trong submit form)
         });
     </script>
 </body>
